@@ -20,142 +20,196 @@
   <meta name="theme-color" content="#0a1224" />
   <style>
     :root {
-      --navy: #0a1224;
-      --navy2: #122344;
-      --blue: #4c72ff;
-      --mint: #8cf0cd;
-      --gold: #f6cb69;
-      --text: #0f172a;
-      --muted: #667085;
-      --line: #e6ebf3;
+      --bg: #060b16;
+      --bg-soft: #0f172d;
+      --panel: rgba(255,255,255,0.06);
+      --panel-line: rgba(255,255,255,0.11);
+      --text: #edf2ff;
+      --muted: #b4c0d9;
+      --body: #101828;
+      --body-muted: #667085;
       --surface: #ffffff;
-      --bg: #f4f7fb;
-      --shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
-      --radius: 24px;
+      --surface-soft: #f6f8fc;
+      --line: #e5eaf3;
+      --blue: #5b7cff;
+      --blue-2: #7b95ff;
+      --mint: #95f3d2;
+      --gold: #f4c95d;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+      --radius: 26px;
     }
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
       font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(91,124,255,0.18), transparent 28%),
+        linear-gradient(180deg, #060b16 0%, #0e1730 34%, #f4f7fb 34%, #f4f7fb 100%);
+      color: var(--body);
       -webkit-font-smoothing: antialiased;
     }
-    body {
-      padding-bottom: 110px;
-    }
+    body { padding-bottom: 110px; }
     .app {
       max-width: 480px;
       margin: 0 auto;
       min-height: 100vh;
-      background: var(--bg);
     }
     .hero {
-      padding: calc(20px + env(safe-area-inset-top)) 20px 28px;
-      background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
-      color: white;
-      border-bottom-left-radius: 32px;
-      border-bottom-right-radius: 32px;
-      box-shadow: 0 24px 50px rgba(10,18,36,0.24);
+      padding: calc(24px + env(safe-area-inset-top)) 20px 34px;
+      color: var(--text);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 18px 18px auto auto;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(149,243,210,0.22), transparent 66%);
+      filter: blur(10px);
+      pointer-events: none;
     }
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 14px;
+      padding: 9px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
       color: var(--mint);
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 18px;
+      backdrop-filter: blur(10px);
     }
     h1 {
       margin: 0;
-      font-size: 34px;
-      line-height: 1.14;
-      letter-spacing: -0.04em;
+      font-size: 37px;
+      line-height: 1.08;
+      letter-spacing: -0.05em;
       font-weight: 900;
     }
     .lead {
       margin: 16px 0 0;
-      color: #d7e2f7;
-      font-size: 16px;
-      line-height: 1.6;
+      color: #d9e3f8;
+      font-size: 17px;
+      line-height: 1.65;
     }
     .sublead {
       margin: 14px 0 0;
       color: #b7c5de;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+    .hero-panel {
+      margin-top: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
+      border: 1px solid var(--panel-line);
+      border-radius: 30px;
+      padding: 18px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 50px rgba(3,8,20,0.22);
     }
     .summary-card {
-      margin-top: 22px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius);
-      padding: 18px;
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 16px;
     }
     .summary-row {
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
       font-size: 14px;
     }
     .summary-row:last-child { border-bottom: 0; }
     .summary-row strong { color: white; }
     .summary-row span { color: #dbe5f9; text-align: right; font-weight: 600; }
+    .hero-mini {
+      margin-top: 14px;
+      background: rgba(255,255,255,0.95);
+      color: var(--body);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .hero-mini-title {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .hero-mini ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #475467;
+      font-size: 14px;
+      line-height: 1.6;
+    }
     .section {
-      padding: 22px 18px 0;
+      padding: 26px 18px 0;
     }
     .section-title {
-      font-size: 24px;
-      line-height: 1.25;
-      letter-spacing: -0.03em;
+      font-size: 26px;
+      line-height: 1.18;
+      letter-spacing: -0.04em;
       margin: 0 0 10px;
       font-weight: 900;
+      color: var(--body);
     }
     .section-desc {
       margin: 0 0 16px;
-      color: var(--muted);
+      color: var(--body-muted);
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
     .alert {
-      background: #fff7ea;
-      border: 1px solid #f6d68b;
+      background: linear-gradient(135deg, #fff8e9, #fff2cc);
+      border: 1px solid #f2d487;
       color: #8a5c00;
-      border-radius: 20px;
-      padding: 16px 18px;
+      border-radius: 22px;
+      padding: 17px 18px;
       font-size: 15px;
       font-weight: 700;
-      line-height: 1.55;
-      box-shadow: 0 10px 24px rgba(138,92,0,0.06);
+      line-height: 1.6;
+      box-shadow: 0 10px 24px rgba(138,92,0,0.07);
     }
     .card {
-      background: var(--surface);
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
       border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 18px;
+      border-radius: 24px;
+      padding: 20px;
       box-shadow: var(--shadow);
       margin-bottom: 14px;
     }
     .card h3 {
       margin: 0 0 8px;
-      font-size: 19px;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.32;
+      letter-spacing: -0.03em;
+      color: var(--body);
     }
     .card p {
       margin: 0;
       color: #4b5563;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+    .benefit-badge {
+      display: inline-flex;
+      margin-bottom: 10px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #eef3ff;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
     }
     .step-card {
       display: flex;
@@ -163,65 +217,69 @@
       align-items: flex-start;
     }
     .step-num {
-      width: 34px;
-      height: 34px;
-      flex: 0 0 34px;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
       border-radius: 50%;
-      background: #edf3ff;
+      background: linear-gradient(135deg, #edf3ff, #dfe8ff);
       color: var(--blue);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
       font-size: 15px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
     }
     .step-body h4 {
       margin: 0 0 6px;
-      font-size: 17px;
-      letter-spacing: -0.02em;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+      color: var(--body);
     }
     .step-body p {
       margin: 0;
       color: #4b5563;
       font-size: 14px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
     .check {
       background: white;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px 18px;
+      border-radius: 20px;
+      padding: 17px 18px;
       font-size: 15px;
       font-weight: 700;
       box-shadow: 0 10px 24px rgba(15,23,42,0.05);
       margin-bottom: 12px;
+      color: var(--body);
     }
     .quote {
-      margin-top: 8px;
-      background: linear-gradient(135deg, #111827, #1f325d);
+      margin-top: 10px;
+      background: linear-gradient(135deg, #0e1629, #1b2950 58%, #304b82);
       color: white;
-      border-radius: 24px;
-      padding: 26px 20px;
+      border-radius: 28px;
+      padding: 30px 22px;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(15,23,42,0.16);
+      box-shadow: 0 20px 40px rgba(15,23,42,0.18);
     }
     .quote p {
       margin: 0;
-      font-size: 24px;
-      line-height: 1.4;
+      font-size: 25px;
+      line-height: 1.36;
       font-weight: 900;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.04em;
     }
     .footer-note {
       margin-top: 12px;
-      background: linear-gradient(135deg, #fff9ea, #fff2c8);
+      background: linear-gradient(135deg, #fff9ea, #fff1c7);
       color: #8a5b00;
       border: 1px solid #f4d37c;
-      border-radius: 20px;
+      border-radius: 22px;
       padding: 18px;
       font-size: 16px;
       font-weight: 800;
       text-align: center;
+      box-shadow: 0 12px 26px rgba(138,91,0,0.08);
     }
     .bottom-bar {
       position: fixed;
@@ -229,8 +287,8 @@
       right: 0;
       bottom: 0;
       padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(16px);
       border-top: 1px solid #e6ebf3;
       display: flex;
       justify-content: center;
@@ -242,30 +300,41 @@
       align-items: center;
       justify-content: center;
       border: 0;
-      border-radius: 18px;
-      padding: 16px 20px;
-      background: linear-gradient(135deg, var(--blue), #6e89ff);
+      border-radius: 20px;
+      padding: 17px 20px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-2));
       color: white;
       font-size: 16px;
       font-weight: 900;
       text-decoration: none;
-      box-shadow: 0 18px 30px rgba(76,114,255,0.26);
+      box-shadow: 0 18px 30px rgba(76,114,255,0.28);
     }
   </style>
 </head>
 <body>
   <div class="app">
     <section class="hero">
-      <div class="badge">📘 더원 팀장 대상 · 실전형 세션</div>
-      <h1>AI를 배우는 시간이 아니라,<br>AI로 영업 구조를 바꾸는 시간입니다.</h1>
-      <p class="lead">AI를 아는 설계사와 AI를 쓰는 설계사, 이제 매출이 갈립니다.</p>
-      <p class="sublead">소개가 아니라 세팅, 개념이 아니라 활용, 아이디어가 아니라 실제 결과물을 가져가는 시간이 되게 만들겠습니다.</p>
+      <div class="badge">📘 더원 팀장 대상 · 사전 공지</div>
+      <h1>AI를 아는 것에서 끝나지 않고,<br>실전 영업 자산으로 바꾸는 시간입니다.</h1>
+      <p class="lead">이번 마스터클래스는 소개가 아니라 세팅, 개념이 아니라 활용, 아이디어가 아니라 실제 결과물을 가져가는 시간입니다.</p>
+      <p class="sublead">프로필, 랜딩페이지, 노션 시스템, 상담 활용 프롬프트까지. 현장에서 바로 써먹을 수 있게 구조부터 잡아드립니다.</p>
 
-      <div class="summary-card">
-        <div class="summary-row"><strong>🗓 일시</strong><span>5월 1일(금)<br>13:00~18:00</span></div>
-        <div class="summary-row"><strong>📍 장소</strong><span>강남역 인근<br>(추후 공지)</span></div>
-        <div class="summary-row"><strong>👥 정원</strong><span>더원 팀장 우선<br>선착순 15명</span></div>
-        <div class="summary-row"><strong>💰 참가비</strong><span>일반 33만원<br><b style="color:#fff;">더원 팀장 11만원</b></span></div>
+      <div class="hero-panel">
+        <div class="summary-card">
+          <div class="summary-row"><strong>🗓 일시</strong><span>5월 1일(금)<br>13:00~18:00</span></div>
+          <div class="summary-row"><strong>📍 장소</strong><span>강남역 인근<br>(장소 추후 공지)</span></div>
+          <div class="summary-row"><strong>👥 정원</strong><span>더원 팀장 우선<br>선착순 15명</span></div>
+          <div class="summary-row"><strong>💰 참가비</strong><span>일반 33만원<br><b style="color:#fff;">더원 팀장 11만원</b></span></div>
+        </div>
+        <div class="hero-mini">
+          <p class="hero-mini-title">이번 세션에서 바로 가져가시는 것</p>
+          <ul>
+            <li>온라인 배포용 나만의 프로필</li>
+            <li>상담에 바로 쓰는 나만의 랜딩페이지</li>
+            <li>노션 기반 개인 저장소 세팅</li>
+            <li>AI 실전 활용 사례와 프롬프트</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -286,18 +355,22 @@
       <h2 class="section-title">이날 실제로 가져가시는 것</h2>
       <p class="section-desc">강의만 듣고 끝나는 자리가 아닙니다. 고객에게 보여줄 수 있는 결과물, 내 영업에 바로 쓸 수 있는 자산을 만드는 시간입니다.</p>
       <div class="card">
+        <div class="benefit-badge">PROFILE</div>
         <h3>온라인 배포용 나만의 프로필</h3>
         <p>고객이 신뢰할 수 있도록, 소개자료로 바로 쓸 수 있도록 나만의 프로필 구조를 정리합니다.</p>
       </div>
       <div class="card">
+        <div class="benefit-badge">LANDING PAGE</div>
         <h3>상담에 바로 쓰는 나만의 랜딩페이지</h3>
         <p>말로 설명하던 내용을 한 페이지로 설득할 수 있게 만듭니다. 현장 제작 선착순 2명 🔥 +@</p>
       </div>
       <div class="card">
+        <div class="benefit-badge">KNOWLEDGE SYSTEM</div>
         <h3>노션 기반 개인 저장소 세팅</h3>
         <p>자료, 문구, 사례, 고객 응대 메모를 쌓아두고 꺼내 쓰는 개인 시스템을 세팅합니다.</p>
       </div>
       <div class="card">
+        <div class="benefit-badge">PROMPTS</div>
         <h3>AI 실전 활용법과 프롬프트</h3>
         <p>설계사 업무에 바로 연결되는 방식으로, 상담 현장에서 바로 써먹는 활용 사례까지 다룹니다.</p>
       </div>
