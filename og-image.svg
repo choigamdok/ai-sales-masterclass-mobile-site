@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="0" fill="url(#bg)"/>
+  <rect x="56" y="52" width="1088" height="526" rx="36" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="92" y="92" width="212" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.16)"/>
+  <text x="198" y="121" text-anchor="middle" fill="#8CF0CD" font-size="22" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="700">더원 팀장 대상 · 사전 공지</text>
+
+  <text x="92" y="220" fill="white" font-size="68" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">AI 영업 마스터클래스</text>
+  <text x="92" y="300" fill="white" font-size="68" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">일정만 비워두세요</text>
+
+  <text x="92" y="368" fill="#D7E2F7" font-size="30" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">5월 1일(금) 13:00~18:00 · 강남역 인근 · 더원 팀장 우선</text>
+  <text x="92" y="414" fill="#B7C5DE" font-size="26" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">곧 신청 공지 안내 예정입니다</text>
+
+  <rect x="92" y="472" width="300" height="64" rx="18" fill="url(#btn)"/>
+  <text x="242" y="513" text-anchor="middle" fill="white" font-size="28" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">사전 공지 확인</text>
+
+  <defs>
+    <linearGradient id="bg" x1="190" y1="54" x2="1013" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1224"/>
+      <stop offset="1" stop-color="#18305D"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="92" y1="472" x2="392" y2="536" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4C72FF"/>
+      <stop offset="1" stop-color="#6E89FF"/>
+    </linearGradient>
+  </defs>
+</svg>
