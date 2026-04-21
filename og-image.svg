@@ -1,26 +1,29 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" rx="0" fill="url(#bg)"/>
-  <rect x="56" y="52" width="1088" height="526" rx="36" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
-  <rect x="92" y="92" width="212" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.16)"/>
-  <text x="198" y="121" text-anchor="middle" fill="#8CF0CD" font-size="22" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="700">더원 팀장 대상 · 사전 공지</text>
+  <rect width="1200" height="630" fill="#050505"/>
+  <rect x="38" y="32" width="1124" height="566" rx="30" fill="#101010" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="74" y="74" width="120" height="38" rx="19" fill="#0d221a" stroke="#173c2d"/>
+  <text x="134" y="98" text-anchor="middle" fill="#7EE7B5" font-size="18" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="700">사전 안내</text>
 
-  <text x="92" y="220" fill="white" font-size="68" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">AI 영업 마스터클래스</text>
-  <text x="92" y="300" fill="white" font-size="68" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">일정만 비워두세요</text>
+  <text x="74" y="190" fill="white" font-size="72" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">AI를 쓰는 설계사가,</text>
+  <text x="74" y="278" fill="white" font-size="72" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">먼저 고객의 시간을</text>
+  <text x="74" y="366" fill="white" font-size="72" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">가져갑니다.</text>
 
-  <text x="92" y="368" fill="#D7E2F7" font-size="30" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">5월 1일(금) 13:00~18:00 · 강남역 인근 · 더원 팀장 우선</text>
-  <text x="92" y="414" fill="#B7C5DE" font-size="26" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">곧 신청 공지 안내 예정입니다</text>
+  <text x="74" y="438" fill="#C8D0DD" font-size="28" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">5월 1일(금) 13:00~18:00 · 강남역 인근 · 더원 팀장 우선</text>
+  <text x="74" y="484" fill="#A7B0BF" font-size="24" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">일정만 비워두세요. 곧 신청 공지 안내 예정입니다.</text>
 
-  <rect x="92" y="472" width="300" height="64" rx="18" fill="url(#btn)"/>
-  <text x="242" y="513" text-anchor="middle" fill="white" font-size="28" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">사전 공지 확인</text>
+  <rect x="736" y="74" width="352" height="468" rx="28" fill="#132126" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="768" y="108" width="136" height="34" rx="17" fill="#251923" stroke="#4C2B3B"/>
+  <text x="836" y="130" text-anchor="middle" fill="#F2A7C4" font-size="16" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="700">더원 팀장 특별 혜택</text>
+  <text x="768" y="214" fill="white" font-size="78" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">11만원</text>
+  <rect x="945" y="174" width="94" height="38" rx="19" fill="#4A3B10"/>
+  <text x="992" y="198" text-anchor="middle" fill="#FFD76A" font-size="22" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="700">70% 할인</text>
+  <text x="768" y="260" fill="#D2D8E3" font-size="24" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">프로필, 랜딩페이지, 노션 시스템,</text>
+  <text x="768" y="296" fill="#D2D8E3" font-size="24" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">상담 프롬프트까지 실전형으로 연결</text>
 
-  <defs>
-    <linearGradient id="bg" x1="190" y1="54" x2="1013" y2="630" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0A1224"/>
-      <stop offset="1" stop-color="#18305D"/>
-    </linearGradient>
-    <linearGradient id="btn" x1="92" y1="472" x2="392" y2="536" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#4C72FF"/>
-      <stop offset="1" stop-color="#6E89FF"/>
-    </linearGradient>
-  </defs>
+  <rect x="768" y="342" width="288" height="56" rx="18" fill="#1C1C1C" stroke="rgba(255,255,255,0.08)"/>
+  <text x="796" y="377" fill="#F1F5F9" font-size="22" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">온라인 배포용 나만의 프로필</text>
+  <rect x="768" y="412" width="288" height="56" rx="18" fill="#1C1C1C" stroke="rgba(255,255,255,0.08)"/>
+  <text x="796" y="447" fill="#F1F5F9" font-size="22" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">나만의 랜딩페이지</text>
+  <rect x="768" y="482" width="288" height="56" rx="18" fill="#1C1C1C" stroke="rgba(255,255,255,0.08)"/>
+  <text x="796" y="517" fill="#F1F5F9" font-size="22" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="500">노션 기반 개인 저장소 세팅</text>
 </svg>

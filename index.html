@@ -1,424 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>AI 영업 마스터클래스 사전 공지</title>
-  <meta name="description" content="5월 1일(금), AI를 배우는 시간이 아니라 영업 구조를 바꾸는 시간입니다. 일정만 비워두세요." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 영업 마스터클래스 | 더원 팀장 사전 공지</title>
+  <meta name="description" content="5월 1일(금) 13:00~18:00, 강남역 인근. 일정만 비워두세요. 곧 신청 공지 안내 예정입니다." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AI 영업 마스터클래스 | 더원 팀장 사전 공지" />
   <meta property="og:description" content="5월 1일(금) 13:00~18:00, 강남역 인근. 일정만 비워두세요. 곧 신청 공지 안내 예정입니다." />
-  <meta property="og:url" content="https://ai-sales-masterclass-mobile-site.vercel.app" />
-  <meta property="og:image" content="https://ai-sales-masterclass-mobile-site.vercel.app/og-image.svg" />
+  <meta property="og:url" content="https://ai-sales-masterclass-mobile-site.vercel.app/?v=final" />
+  <meta property="og:image" content="https://ai-sales-masterclass-mobile-site.vercel.app/og-image.svg?v=final" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="AI 영업 마스터클래스 사전 공지 썸네일" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AI 영업 마스터클래스 | 더원 팀장 사전 공지" />
   <meta name="twitter:description" content="5월 1일(금) 13:00~18:00, 강남역 인근. 일정만 비워두세요. 곧 신청 공지 안내 예정입니다." />
-  <meta name="twitter:image" content="https://ai-sales-masterclass-mobile-site.vercel.app/og-image.svg" />
-  <meta name="theme-color" content="#0a1224" />
+  <meta name="twitter:image" content="https://ai-sales-masterclass-mobile-site.vercel.app/og-image.svg?v=final" />
+  <meta name="theme-color" content="#050505" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#050505',
+            ink: '#f5f7fb',
+            mist: '#a1a1aa',
+            line: 'rgba(255,255,255,0.08)',
+            emeraldx: '#34d399',
+            emeraldy: '#10b981',
+            cyanx: '#22d3ee',
+            rosex: '#fb7185',
+            amberx: '#fbbf24'
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Outfit', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'Pretendard', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            haze: '0 30px 90px rgba(0,0,0,0.34)',
+            emerald: '0 0 40px rgba(52,211,153,0.12)',
+            rose: '0 0 40px rgba(251,113,133,0.14)'
+          },
+          keyframes: {
+            floaty: {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-14px)' }
+            },
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(28px)', filter: 'blur(6px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' }
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' }
+            }
+          },
+          animation: {
+            floaty: 'floaty 7s ease-in-out infinite',
+            fadeUp: 'fadeUp .9s cubic-bezier(0.16,1,0.3,1) both',
+            marquee: 'marquee 22s linear infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
   <style>
-    :root {
-      --bg: #060b16;
-      --bg-soft: #0f172d;
-      --panel: rgba(255,255,255,0.06);
-      --panel-line: rgba(255,255,255,0.11);
-      --text: #edf2ff;
-      --muted: #b4c0d9;
-      --body: #101828;
-      --body-muted: #667085;
-      --surface: #ffffff;
-      --surface-soft: #f6f8fc;
-      --line: #e5eaf3;
-      --blue: #5b7cff;
-      --blue-2: #7b95ff;
-      --mint: #95f3d2;
-      --gold: #f4c95d;
-      --shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
-      --radius: 26px;
+    html { scroll-behavior: smooth; }
+    body { word-break: keep-all; background:#050505; }
+    .noise::before {
+      content:''; position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.03;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.8) 0 .5px, transparent .6px),
+        radial-gradient(circle at 70% 40%, rgba(255,255,255,.7) 0 .6px, transparent .7px),
+        radial-gradient(circle at 40% 70%, rgba(255,255,255,.7) 0 .4px, transparent .5px);
+      background-size: 18px 18px, 22px 22px, 28px 28px;
+      mix-blend-mode: soft-light;
     }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    .glass { backdrop-filter: blur(22px); }
+    .double-bezel { padding: 6px; border-radius: 34px; background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); box-shadow: 0 30px 90px rgba(0,0,0,.30); }
+    .double-bezel > .inner { border-radius: 28px; background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)); box-shadow: inset 0 1px 0 rgba(255,255,255,.07); }
+    .smooth { transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-mesh {
       background:
-        radial-gradient(circle at top right, rgba(91,124,255,0.18), transparent 28%),
-        linear-gradient(180deg, #060b16 0%, #0e1730 34%, #f4f7fb 34%, #f4f7fb 100%);
-      color: var(--body);
-      -webkit-font-smoothing: antialiased;
-    }
-    body { padding-bottom: 110px; }
-    .app {
-      max-width: 480px;
-      margin: 0 auto;
-      min-height: 100vh;
-    }
-    .hero {
-      padding: calc(24px + env(safe-area-inset-top)) 20px 34px;
-      color: var(--text);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 18px 18px auto auto;
-      width: 160px;
-      height: 160px;
-      background: radial-gradient(circle, rgba(149,243,210,0.22), transparent 66%);
-      filter: blur(10px);
-      pointer-events: none;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--mint);
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
-      backdrop-filter: blur(10px);
-    }
-    h1 {
-      margin: 0;
-      font-size: 37px;
-      line-height: 1.08;
-      letter-spacing: -0.05em;
-      font-weight: 900;
-    }
-    .lead {
-      margin: 16px 0 0;
-      color: #d9e3f8;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-    .sublead {
-      margin: 14px 0 0;
-      color: #b7c5de;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-    .hero-panel {
-      margin-top: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
-      border: 1px solid var(--panel-line);
-      border-radius: 30px;
-      padding: 18px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 24px 50px rgba(3,8,20,0.22);
-    }
-    .summary-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 16px;
-    }
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.09);
-      font-size: 14px;
-    }
-    .summary-row:last-child { border-bottom: 0; }
-    .summary-row strong { color: white; }
-    .summary-row span { color: #dbe5f9; text-align: right; font-weight: 600; }
-    .hero-mini {
-      margin-top: 14px;
-      background: rgba(255,255,255,0.95);
-      color: var(--body);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-    .hero-mini-title {
-      margin: 0 0 10px;
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    .hero-mini ul {
-      margin: 0;
-      padding-left: 18px;
-      color: #475467;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .section {
-      padding: 26px 18px 0;
-    }
-    .section-title {
-      font-size: 26px;
-      line-height: 1.18;
-      letter-spacing: -0.04em;
-      margin: 0 0 10px;
-      font-weight: 900;
-      color: var(--body);
-    }
-    .section-desc {
-      margin: 0 0 16px;
-      color: var(--body-muted);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-    .alert {
-      background: linear-gradient(135deg, #fff8e9, #fff2cc);
-      border: 1px solid #f2d487;
-      color: #8a5c00;
-      border-radius: 22px;
-      padding: 17px 18px;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.6;
-      box-shadow: 0 10px 24px rgba(138,92,0,0.07);
-    }
-    .card {
-      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: var(--shadow);
-      margin-bottom: 14px;
-    }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      line-height: 1.32;
-      letter-spacing: -0.03em;
-      color: var(--body);
-    }
-    .card p {
-      margin: 0;
-      color: #4b5563;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-    .benefit-badge {
-      display: inline-flex;
-      margin-bottom: 10px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: #eef3ff;
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-    .step-card {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-    .step-num {
-      width: 36px;
-      height: 36px;
-      flex: 0 0 36px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #edf3ff, #dfe8ff);
-      color: var(--blue);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 15px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    }
-    .step-body h4 {
-      margin: 0 0 6px;
-      font-size: 18px;
-      letter-spacing: -0.03em;
-      color: var(--body);
-    }
-    .step-body p {
-      margin: 0;
-      color: #4b5563;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .check {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 17px 18px;
-      font-size: 15px;
-      font-weight: 700;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.05);
-      margin-bottom: 12px;
-      color: var(--body);
-    }
-    .quote {
-      margin-top: 10px;
-      background: linear-gradient(135deg, #0e1629, #1b2950 58%, #304b82);
-      color: white;
-      border-radius: 28px;
-      padding: 30px 22px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(15,23,42,0.18);
-    }
-    .quote p {
-      margin: 0;
-      font-size: 25px;
-      line-height: 1.36;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-    .footer-note {
-      margin-top: 12px;
-      background: linear-gradient(135deg, #fff9ea, #fff1c7);
-      color: #8a5b00;
-      border: 1px solid #f4d37c;
-      border-radius: 22px;
-      padding: 18px;
-      font-size: 16px;
-      font-weight: 800;
-      text-align: center;
-      box-shadow: 0 12px 26px rgba(138,91,0,0.08);
-    }
-    .bottom-bar {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(16px);
-      border-top: 1px solid #e6ebf3;
-      display: flex;
-      justify-content: center;
-      z-index: 20;
-    }
-    .bottom-button {
-      width: min(448px, 100%);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 0;
-      border-radius: 20px;
-      padding: 17px 20px;
-      background: linear-gradient(135deg, var(--blue), var(--blue-2));
-      color: white;
-      font-size: 16px;
-      font-weight: 900;
-      text-decoration: none;
-      box-shadow: 0 18px 30px rgba(76,114,255,0.28);
+      radial-gradient(circle at 10% 20%, rgba(52,211,153,0.14), transparent 26%),
+      radial-gradient(circle at 100% 0%, rgba(34,211,238,0.10), transparent 24%),
+      radial-gradient(circle at 80% 80%, rgba(16,185,129,0.10), transparent 24%);
     }
   </style>
 </head>
-<body>
-  <div class="app">
-    <section class="hero">
-      <div class="badge">📘 더원 팀장 대상 · 사전 공지</div>
-      <h1>AI를 아는 것에서 끝나지 않고,<br>실전 영업 자산으로 바꾸는 시간입니다.</h1>
-      <p class="lead">이번 마스터클래스는 소개가 아니라 세팅, 개념이 아니라 활용, 아이디어가 아니라 실제 결과물을 가져가는 시간입니다.</p>
-      <p class="sublead">프로필, 랜딩페이지, 노션 시스템, 상담 활용 프롬프트까지. 현장에서 바로 써먹을 수 있게 구조부터 잡아드립니다.</p>
-
-      <div class="hero-panel">
-        <div class="summary-card">
-          <div class="summary-row"><strong>🗓 일시</strong><span>5월 1일(금)<br>13:00~18:00</span></div>
-          <div class="summary-row"><strong>📍 장소</strong><span>강남역 인근<br>(장소 추후 공지)</span></div>
-          <div class="summary-row"><strong>👥 정원</strong><span>더원 팀장 우선<br>선착순 15명</span></div>
-          <div class="summary-row"><strong>💰 참가비</strong><span>일반 33만원<br><b style="color:#fff;">더원 팀장 11만원</b></span></div>
-        </div>
-        <div class="hero-mini">
-          <p class="hero-mini-title">이번 세션에서 바로 가져가시는 것</p>
-          <ul>
-            <li>온라인 배포용 나만의 프로필</li>
-            <li>상담에 바로 쓰는 나만의 랜딩페이지</li>
-            <li>노션 기반 개인 저장소 세팅</li>
-            <li>AI 실전 활용 사례와 프롬프트</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="alert">많은 설계사들이 AI를 알고는 있지만, 아직 자기 영업 흐름 안으로는 못 들여오고 있습니다. 이번 세션은 그 간극을 실제 결과물로 메우는 시간입니다.</div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">이런 분께 추천합니다</h2>
-      <p class="section-desc">지금 내 상담 구조와 소개 방식을 한 단계 올리고 싶은 분께 특히 맞습니다.</p>
-      <div class="check">고객에게 나를 더 잘 보여주고 싶은 분</div>
-      <div class="check">상담과 소개의 전환율을 높이고 싶은 분</div>
-      <div class="check">AI를 들어봤지만 아직 실전에 못 붙인 분</div>
-      <div class="check">프로필, 콘텐츠, 상담자료를 체계화하고 싶은 분</div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">이날 실제로 가져가시는 것</h2>
-      <p class="section-desc">강의만 듣고 끝나는 자리가 아닙니다. 고객에게 보여줄 수 있는 결과물, 내 영업에 바로 쓸 수 있는 자산을 만드는 시간입니다.</p>
-      <div class="card">
-        <div class="benefit-badge">PROFILE</div>
-        <h3>온라인 배포용 나만의 프로필</h3>
-        <p>고객이 신뢰할 수 있도록, 소개자료로 바로 쓸 수 있도록 나만의 프로필 구조를 정리합니다.</p>
-      </div>
-      <div class="card">
-        <div class="benefit-badge">LANDING PAGE</div>
-        <h3>상담에 바로 쓰는 나만의 랜딩페이지</h3>
-        <p>말로 설명하던 내용을 한 페이지로 설득할 수 있게 만듭니다. 현장 제작 선착순 2명 🔥 +@</p>
-      </div>
-      <div class="card">
-        <div class="benefit-badge">KNOWLEDGE SYSTEM</div>
-        <h3>노션 기반 개인 저장소 세팅</h3>
-        <p>자료, 문구, 사례, 고객 응대 메모를 쌓아두고 꺼내 쓰는 개인 시스템을 세팅합니다.</p>
-      </div>
-      <div class="card">
-        <div class="benefit-badge">PROMPTS</div>
-        <h3>AI 실전 활용법과 프롬프트</h3>
-        <p>설계사 업무에 바로 연결되는 방식으로, 상담 현장에서 바로 써먹는 활용 사례까지 다룹니다.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">왜 이번 세션이 다른가</h2>
-      <p class="section-desc">AI를 설명하는 시간이 아니라, 설계사 한 사람의 영업 구조를 실제로 바꾸기 위한 세션으로 설계했습니다.</p>
-      <div class="card step-card">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h4>보여지는 나를 만든다</h4>
-          <p>고객이 신뢰할 수 있는 소개 구조와 프로필 자산을 정리합니다.</p>
-        </div>
-      </div>
-      <div class="card step-card">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h4>설명하던 내용을 페이지로 바꾼다</h4>
-          <p>상담에서 반복하던 설명을 랜딩페이지와 자료 구조로 전환합니다.</p>
-        </div>
-      </div>
-      <div class="card step-card">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h4>반복 업무를 시스템화한다</h4>
-          <p>노션과 AI를 붙여 자료, 메모, 프롬프트를 쌓아두고 꺼내 쓰는 구조를 만듭니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">참여 전 꼭 확인해주세요</h2>
-      <p class="section-desc">실습 중심 세션이라 준비사항과 참여 조건이 분명합니다.</p>
-      <div class="check">노트북 지참 필수 (실습 중심)</div>
-      <div class="check">사전조사 폼 작성자만 참석 가능</div>
-      <div class="check">정원 15명, 입금 순 마감</div>
-      <div class="check">정식 신청 안내는 곧 발송됩니다</div>
-
-      <div class="quote">
-        <p>AI를 아는 설계사와<br>AI를 쓰는 설계사,<br>이제 매출이 갈립니다.</p>
-      </div>
-      <div class="footer-note">🗓 5월 1일, 캘린더에 먼저 표시해두세요.</div>
-    </section>
+<body class="noise min-h-[100dvh] bg-[#050505] font-sans text-ink antialiased selection:bg-emeraldx/20 selection:text-white">
+  <div class="fixed inset-0 -z-10 overflow-hidden hero-mesh">
+    <div class="absolute -left-16 top-8 h-[24rem] w-[24rem] rounded-full bg-emeraldx/10 blur-3xl animate-floaty"></div>
+    <div class="absolute right-[-5rem] top-[-2rem] h-[26rem] w-[26rem] rounded-full bg-cyanx/10 blur-3xl animate-floaty" style="animation-delay:1.2s"></div>
+    <div class="absolute inset-x-0 top-0 h-[24rem] bg-[radial-gradient(circle_at_top,rgba(52,211,153,0.08),transparent_36%)]"></div>
   </div>
 
-  <div class="bottom-bar">
-    <a class="bottom-button" href="#">일정만 비워두세요. 곧 신청 공지 안내 예정입니다.</a>
-  </div>
+  <header class="sticky top-0 z-40">
+    <div class="mx-auto mt-4 flex w-[calc(100%-24px)] max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 glass shadow-haze sm:px-6">
+      <div class="flex items-center gap-3 text-sm font-medium text-white/90">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full border border-emeraldx/15 bg-emeraldx/10 text-emeraldx">
+          <iconify-icon icon="solar:magic-stick-3-linear" width="18"></iconify-icon>
+        </span>
+        <span>더원자산관리 · AI 영업 마스터클래스</span>
+      </div>
+      <a href="#cta" class="smooth inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/85 hover:bg-white/10">
+        캘린더에 먼저 잡아두기
+        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/8"><iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-7xl px-4 pb-20 pt-10 sm:px-6 lg:px-8 lg:pt-16">
+      <div class="grid items-end gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div class="animate-fadeUp">
+          <div class="inline-flex items-center gap-2 rounded-full border border-emeraldx/15 bg-emeraldx/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emeraldx">
+            <iconify-icon icon="solar:bolt-linear" width="14"></iconify-icon>
+            Pre-Announcement
+          </div>
+          <h1 class="mt-6 max-w-5xl font-display text-5xl font-[800] leading-[0.92] tracking-[-0.07em] text-white sm:text-6xl lg:text-8xl">
+            AI를 쓰는 설계사가,
+            <span class="block text-white/70">먼저 고객의 시간을</span>
+            가져갑니다.
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            더원 팀장님들을 위한 특별 세션입니다. 프로필, 랜딩페이지, 개인 저장소, 상담 프롬프트까지 실전형으로 연결합니다.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#program" class="smooth inline-flex items-center gap-3 rounded-full bg-emeraldx px-8 py-4 text-base font-semibold text-black hover:scale-[1.02] hover:shadow-emerald active:scale-[0.98]">
+              이날 챙겨가는 것 보기
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-black/8"><iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon></span>
+            </a>
+            <a href="#summary" class="smooth inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/6 px-8 py-4 text-base font-semibold text-white hover:scale-[1.02] hover:bg-white/10 active:scale-[0.98]">
+              행사 핵심 정보 보기
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-white/8"><iconify-icon icon="solar:calendar-linear" width="18"></iconify-icon></span>
+            </a>
+          </div>
+
+          <div class="mt-8 inline-flex items-center gap-3 rounded-full border border-rosex/20 bg-rosex/10 px-4 py-2 text-sm font-semibold text-rose-300 shadow-rose">
+            <iconify-icon icon="solar:ticket-sale-linear" width="16"></iconify-icon>
+            일반 33만원 → 더원 팀장 11만원 · 70% 할인
+          </div>
+
+          <div class="mt-8 overflow-hidden rounded-full border border-white/8 bg-white/[0.03] py-3">
+            <div class="flex w-max min-w-full animate-marquee gap-12 px-6 text-sm text-zinc-400">
+              <span class="inline-flex items-center gap-2"><iconify-icon icon="solar:laptop-minimalistic-linear" width="16"></iconify-icon>노트북 지참 필수</span>
+              <span class="inline-flex items-center gap-2"><iconify-icon icon="solar:document-text-linear" width="16"></iconify-icon>사전조사 폼 작성자만 참석 가능</span>
+              <span class="inline-flex items-center gap-2"><iconify-icon icon="solar:users-group-rounded-linear" width="16"></iconify-icon>정원 15명 · 입금 순 마감</span>
+              <span class="inline-flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16"></iconify-icon>정식 신청 안내 곧 발송</span>
+              <span class="inline-flex items-center gap-2"><iconify-icon icon="solar:laptop-minimalistic-linear" width="16"></iconify-icon>노트북 지참 필수</span>
+              <span class="inline-flex items-center gap-2"><iconify-icon icon="solar:document-text-linear" width="16"></iconify-icon>사전조사 폼 작성자만 참석 가능</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="double-bezel animate-fadeUp" id="summary">
+          <div class="inner p-6 sm:p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-medium text-emeraldx">행사 핵심 정보</p>
+                <h2 class="mt-2 text-3xl font-semibold tracking-[-0.04em] text-white">먼저 일정부터 잡아두세요</h2>
+              </div>
+              <span class="rounded-full border border-emeraldx/15 bg-emeraldx/10 px-3 py-1 text-xs font-medium text-emeraldx">더원 팀장 우선</span>
+            </div>
+            <div class="mt-6 grid gap-3">
+              <div class="rounded-[22px] border border-white/8 bg-white/[0.03] p-4"><p class="text-[11px] uppercase tracking-[0.15em] text-zinc-500">일정</p><p class="mt-2 text-2xl font-semibold text-white">5월 1일</p><p class="mt-1 text-sm text-zinc-400">13:00~18:00</p></div>
+              <div class="rounded-[22px] border border-white/8 bg-white/[0.03] p-4"><p class="text-[11px] uppercase tracking-[0.15em] text-zinc-500">장소</p><p class="mt-2 text-xl font-semibold text-white">강남역 인근</p><p class="mt-1 text-sm text-zinc-400">장소 추후 공지</p></div>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <div class="rounded-[22px] border border-white/8 bg-white/[0.03] p-4"><p class="text-[11px] uppercase tracking-[0.15em] text-zinc-500">대상</p><p class="mt-2 text-lg font-semibold text-white">더원 팀장 우선</p><p class="text-sm text-zinc-400">선착순 15명</p></div>
+                <div class="rounded-[22px] border border-rosex/20 bg-rosex/10 p-4"><p class="text-[11px] uppercase tracking-[0.15em] text-rose-300/80">특별 혜택</p><p class="mt-2 text-lg font-semibold text-white">11만원</p><p class="text-sm text-rose-300">일반 33만원 → 70% 할인</p></div>
+              </div>
+              <div class="rounded-[22px] border border-white/8 bg-white/[0.03] p-3">
+                <div class="rounded-[18px] border border-white/6 bg-white/[0.02] px-4 py-3 text-sm text-zinc-300">온라인 배포용 나만의 프로필</div>
+                <div class="mt-3 rounded-[18px] border border-white/6 bg-white/[0.02] px-4 py-3 text-sm text-zinc-300">나만의 랜딩페이지</div>
+                <div class="mt-3 rounded-[18px] border border-white/6 bg-white/[0.02] px-4 py-3 text-sm text-zinc-300">노션 기반 개인 저장소 세팅</div>
+                <div class="mt-3 rounded-[18px] border border-white/6 bg-white/[0.02] px-4 py-3 text-sm text-zinc-300">상담 실전 활용 사례 & 프롬프트</div>
+              </div>
+            </div>
+            <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-emeraldx/12 bg-emeraldx/8 px-3 py-2 text-sm text-emeraldx">
+              <iconify-icon icon="solar:check-circle-linear" width="16"></iconify-icon>
+              정식 신청 안내는 곧 별도 발송됩니다
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 rounded-full border border-emeraldx/15 bg-emeraldx/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emeraldx">What you take away</div>
+        <h2 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-white sm:text-6xl">이날 바로 챙겨가시는 것</h2>
+        <p class="mt-5 text-lg leading-relaxed text-zinc-400">듣고 끝나는 세션이 아니라, 다음 상담과 다음 영업 자산으로 바로 이어지는 결과물을 가져가게 됩니다.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:grid-rows-[repeat(2,minmax(220px,1fr))]">
+        <div class="double-bezel lg:col-span-4 lg:row-span-2"><div class="inner h-full p-7"><div class="inline-flex items-center gap-3 text-emeraldx"><iconify-icon icon="solar:user-id-linear" width="20"></iconify-icon><span class="text-sm font-medium">01</span></div><h3 class="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">온라인 배포용 나만의 프로필</h3><p class="mt-4 text-base leading-relaxed text-zinc-400">고객이 처음 보게 되는 첫인상을 정리합니다. 소개 한 줄, 전문 분야, 신뢰 포인트까지 고객 노출 기준으로 구조를 다시 잡습니다.</p></div></div>
+        <div class="double-bezel lg:col-span-8"><div class="inner h-full p-7"><div class="inline-flex items-center gap-3 text-emeraldx"><iconify-icon icon="solar:widget-4-linear" width="20"></iconify-icon><span class="text-sm font-medium">02</span></div><h3 class="mt-5 text-2xl font-semibold tracking-[-0.04em] text-white">나만의 랜딩페이지</h3><p class="mt-4 text-base leading-relaxed text-zinc-400">영업 현장에서 바로 활용 가능한 개인 페이지 방향을 잡고, 현장 제작 선착순 대상은 실제 제작 흐름까지 연결합니다.</p></div></div>
+        <div class="double-bezel lg:col-span-3"><div class="inner h-full p-7"><div class="inline-flex items-center gap-3 text-emeraldx"><iconify-icon icon="solar:notebook-linear" width="20"></iconify-icon><span class="text-sm font-medium">03</span></div><h3 class="mt-5 text-2xl font-semibold tracking-[-0.04em] text-white">노션 기반 개인 저장소</h3><p class="mt-4 text-base leading-relaxed text-zinc-400">자료, 문구, 상담 흐름, 사례, 프롬프트를 흩어지지 않게 정리합니다.</p></div></div>
+        <div class="double-bezel lg:col-span-4"><div class="inner h-full p-7"><div class="inline-flex items-center gap-3 text-emeraldx"><iconify-icon icon="solar:cpu-bolt-linear" width="20"></iconify-icon><span class="text-sm font-medium">04</span></div><h3 class="mt-5 text-2xl font-semibold tracking-[-0.04em] text-white">AI 실전 활용</h3><p class="mt-4 text-base leading-relaxed text-zinc-400">영업에서 어디에 어떻게 붙여야 먹히는지 중심으로 다룹니다.</p></div></div>
+        <div class="double-bezel lg:col-span-5"><div class="inner h-full p-7"><div class="inline-flex items-center gap-3 text-emeraldx"><iconify-icon icon="solar:chat-round-line-line-duotone" width="20"></iconify-icon><span class="text-sm font-medium">05 · 06</span></div><h3 class="mt-5 text-2xl font-semibold tracking-[-0.04em] text-white">상담 사례와 프롬프트 자산</h3><p class="mt-4 text-base leading-relaxed text-zinc-400">상담 현장에서 바로 쓸 수 있는 흐름, 문장 톤, 케이스별 접근법과 반복 활용 가능한 프롬프트 구조를 함께 가져갑니다.</p></div></div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="grid gap-5 lg:grid-cols-[1fr_1fr]">
+        <div class="double-bezel"><div class="inner p-7"><div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[11px] uppercase tracking-[0.15em] text-zinc-300">Check before you come</div><h3 class="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">먼저 알려드립니다</h3><div class="mt-6 grid gap-3"><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">노트북 지참 필수 (실습 중심)</div><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">사전조사 폼 작성자만 참석 가능</div><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">정원 15명, 입금 순 마감</div><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">정식 신청 안내는 곧 발송됩니다</div></div></div></div>
+        <div class="double-bezel"><div class="inner p-7"><div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[11px] uppercase tracking-[0.15em] text-zinc-300">Who should join</div><h3 class="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">이런 팀장님께 특히 맞습니다</h3><div class="mt-6 grid gap-3"><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">AI를 어디에 써야 할지 막막했지만, 이제는 실전으로 연결하고 싶은 분</div><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">영업에 바로 쓸 수 있는 프로필, 페이지, 문구 자산이 필요한 분</div><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">고객 응대와 상담 흐름에 AI를 접목해 보고 싶은 분</div><div class="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-zinc-300">도구만 아는 수준이 아니라, 매출과 연결되는 구조를 만들고 싶은 분</div></div></div></div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/6 bg-white/[0.02] py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-emeraldx/15 bg-emeraldx/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emeraldx">Message</div>
+          <h2 class="mt-6 text-4xl font-bold leading-tight tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">AI를 아는 설계사와,<br>AI를 쓰는 설계사의 차이는<br>이제 결과로 드러납니다.</h2>
+          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">이번 세션은 도구 설명에서 멈추지 않습니다. 각자 영업 현장에서 실제로 써먹을 수 있는 구조를 만드는 데 초점을 맞춥니다.</p>
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+          <div class="double-bezel"><div class="inner p-7"><h3 class="text-2xl font-semibold tracking-[-0.04em] text-white">이번 세션의 방향</h3><ul class="mt-5 space-y-4 text-zinc-300"><li class="flex gap-3"><iconify-icon icon="solar:check-read-linear" class="mt-1 text-emeraldx" width="18"></iconify-icon><span>듣고 끝나는 강의가 아니라, 바로 쓰는 실습형 세션</span></li><li class="flex gap-3"><iconify-icon icon="solar:check-read-linear" class="mt-1 text-emeraldx" width="18"></iconify-icon><span>팀장님의 프로필과 영업 자산을 실제로 남기는 방향</span></li><li class="flex gap-3"><iconify-icon icon="solar:check-read-linear" class="mt-1 text-emeraldx" width="18"></iconify-icon><span>멋져 보이는 AI가 아니라, 매출에 연결되는 AI 활용 설계</span></li></ul></div></div>
+          <div class="double-bezel"><div class="inner p-7"><h3 class="text-2xl font-semibold tracking-[-0.04em] text-white">운영 방식</h3><ul class="mt-5 space-y-4 text-zinc-300"><li>더원 팀장 우선</li><li>선착순 15명</li><li>입금 순 마감</li><li>정식 신청 안내 별도 발송</li></ul></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="double-bezel"><div class="inner flex flex-col gap-6 p-8 lg:flex-row lg:items-end lg:justify-between lg:p-10">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-emeraldx/15 bg-emeraldx/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emeraldx">Save the date</div>
+          <h2 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-white sm:text-5xl">우선 일정만 비워두세요</h2>
+          <p class="mt-5 text-lg leading-relaxed text-zinc-400">5월 1일 13:00~18:00, 강남역 인근에서 진행됩니다. 정식 신청 링크와 정확한 장소 안내는 곧 별도 공지됩니다.</p>
+          <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-rosex/20 bg-rosex/10 px-4 py-2 text-sm font-semibold text-rose-300 shadow-rose">
+            <iconify-icon icon="solar:tag-price-linear" width="16"></iconify-icon>
+            33만원 원가 → 11만원 · 70% 할인
+          </div>
+          <p class="mt-4 text-sm font-medium tracking-[0.02em] text-zinc-500">STATUS · PRE-ANNOUNCEMENT / APPLICATION LINK · COMING SOON</p>
+        </div>
+        <a href="#summary" class="smooth inline-flex items-center gap-3 rounded-full bg-emeraldx px-8 py-4 text-base font-semibold text-black hover:scale-[1.02] hover:shadow-emerald active:scale-[0.98]">
+          핵심 정보 다시 보기
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-black/8"><iconify-icon icon="solar:arrow-up-linear" width="18"></iconify-icon></span>
+        </a>
+      </div></div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/6 py-8 text-center text-sm text-zinc-500">
+    더원자산관리 · AI 영업 마스터클래스 Supanova Version
+  </footer>
 </body>
 </html>
